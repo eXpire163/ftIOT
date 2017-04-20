@@ -1,0 +1,16 @@
+{
+  "name": "ftIOT",
+  "version": "0.0.1",
+  "description": "rocks the planat",
+  "main": "server.js",
+  "author": {
+    "name": "eXpire163",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "^4.12.3",
+    "serve-static": "^1.9.2",
+    "forever": "^0.14.1",
+    "shelljs": "0.5.3"
+  }
+}
