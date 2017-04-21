@@ -6,20 +6,20 @@
 
 
 <div id="textlog"></div>
-<button onClick='client.publish("$SYS/#", "hello from button")'>send</button>
+<button onClick='client.publish("SYS/asdf", "hello from button")'>send</button>
 
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 <script>
-  var client = mqtt.connect("ws://ftpi:1883") // you add a ws:// url here
-  client.subscribe("$SYS/#")
+  var client = mqtt.connect("ws://test.mosca.io:80") // you add a ws:// url here
+  client.subscribe("SYS/asdf")
 
   client.on("message", function (topic, payload) {
-    alert([topic, payload].join(": "))
-	console.log(message.toString())
-    client.end()
+    //alert([topic, payload].join(": "))
+	console.log([topic, payload].join(": "))
+    //client.end()
   })
 
-  client.publish("$SYS/#", "hello world!")
+  client.publish("SYS/asdf", "hello world!")
 </script>
 </body>
 </html>
